@@ -1,12 +1,30 @@
-#gameWindow{}
+*{
+    border: 1px solid #000;
+}
 
-#inventoryBox{}
+#gameWindow{
+    width: 800px;
+    height: 608;
+}
+
+#inventoryBox{
+    width: 180px;
+    height: 80px;
+}
 
 #dialogBar{}
-#setMainDialog{}
+
+#setMainDialog{
+    width: 800px;
+    height: 64px;
+}
+
 #heroAvatar{}
+
 #heroSpeach{}
+
 #counterSpeach{}
+
 #counterCharacter{}
 
 #squareTree{}
