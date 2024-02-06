@@ -1,20 +1,48 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* can be changed too a grid based. i chose flex bc its more 'flex'ible.
+    grid-template-colums: auto 800px auto;
+    grind-template-rows: auto 608px auto;
+    */
+}
+
+#title{
+    /*
+    grid-column-start: 2;
+    grid-column-end: 1;
+    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #gameWindow{
     width: 800px;
     height: 608px;
     background-color: rgb(92, 43, 226);
+    position: relative;
+    /*
+    grid-column-start: 2;
+    grid-column-end: 2;
+    */
 }
 
 #inventoryBox{
     width: 180px;
     height: 80px;
     background-color: black;
+    top: 10px;
+    left: 10px;
 }
 
 #dialogBar{
-
+    bottom: 0px;
 }
 
 #setMainDialog{
+    position: relative;
     width: 800px;
     height: 64px;
     background-color: rgb(244, 248, 252);
@@ -55,3 +83,19 @@
 }
 
 #tileMap{}
+
+.background{
+    position: absolute;
+    z-index: 0;
+    
+}
+
+.character{
+    position: absolute;
+    z-index: 100;
+}
+
+.foreground{
+    position: absolute;
+    z-index: 1000;
+}
