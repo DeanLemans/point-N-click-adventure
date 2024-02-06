@@ -1,10 +1,6 @@
-*{
-    border: 1px solid #000;
-}
-
 #gameWindow{
     width: 800px;
-    height: 608;
+    height: 608px;
     background-color: rgb(92, 43, 226);
 }
 
@@ -49,6 +45,7 @@
 #squareTree{
     width: 46px;
     height: 46px;
+    background-color: forestgreen;
 }
 
 #hero{
