@@ -5,30 +5,56 @@
 #gameWindow{
     width: 800px;
     height: 608;
+    background-color: rgb(92, 43, 226);
 }
 
 #inventoryBox{
     width: 180px;
     height: 80px;
+    background-color: black;
 }
 
-#dialogBar{}
+#dialogBar{
+
+}
 
 #setMainDialog{
     width: 800px;
     height: 64px;
+    background-color: rgb(244, 248, 252);
 }
 
-#heroAvatar{}
+#heroAvatar{
+    width: 32px;
+    height: 64px;
+    background-color: rgb(255, 193, 113);
+}
 
-#heroSpeach{}
+#heroSpeach{
+    width: 300px;
+    background-color: #ffffff;
+}
 
-#counterSpeach{}
+#counterSpeach{
+    width: 300px;
+    background-color: #ffffff;
+}
 
-#counterCharacter{}
+#counterAvatar{
+    width: 32px;
+    height: 64px;
+    background-color: crimson;
+}
 
-#squareTree{}
+#squareTree{
+    width: 46px;
+    height: 46px;
+}
 
-#hero{}
+#hero{
+    width: 32px;
+    height: 32px;
+    background-color: darkmagenta;
+}
 
 #tileMap{}
