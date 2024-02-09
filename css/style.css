@@ -1,38 +1,34 @@
 .body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* can be changed too a grid based. i chose flex bc its more 'flex'ible.
-    grid-template-colums: auto 800px auto;
-    grind-template-rows: auto 608px auto;
-    */
+    display: grid;
+    /*can be changed too a grid based. i chose flex bc its more 'flex'ible.*/
+    grid-template-columns: auto 800px auto;
+    grid-template-rows: auto 608px auto;
+    
 }
 
 #title{
-    /*
     grid-column-start: 2;
     grid-column-end: 1;
-    */
+    /*
     display: flex;
     justify-content: center;
     align-items: center;
+    */
 }
 
 #gameWindow{
     width: 800px;
     height: 608px;
-    background-color: rgb(92, 43, 226);
-    position: relative;
-    /*
+    background-color: #0022fe;
     grid-column-start: 2;
-    grid-column-end: 2;
-    */
+    grid-row-start: 2;
+    position: relative;
 }
 
 #inventoryBox{
     width: 180px;
     height: 80px;
-    background-color: black;
+    background-color: #000000;
     top: 10px;
     left: 10px;
 }
@@ -45,13 +41,15 @@
     position: relative;
     width: 800px;
     height: 64px;
-    background-color: rgb(244, 248, 252);
+    background-color: #FFFFFF;
 }
 
 #heroAvatar{
-    width: 32px;
-    height: 64px;
-    background-color: rgb(255, 193, 113);
+    width: 100px;
+    height: 100px;
+    background-color: #fe9400;
+    bottom: 0px;
+    left: 0px;
 }
 
 #heroSpeach{
@@ -65,9 +63,11 @@
 }
 
 #counterAvatar{
-    width: 32px;
-    height: 64px;
+    width: 100px;
+    height: 100px;
     background-color: crimson;
+    bottom: 0px;
+    right: 0px;
 }
 
 #squareTree{
