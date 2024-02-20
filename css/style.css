@@ -74,9 +74,12 @@
     width: 46px;
     height: 46px;
     background-color: forestgreen;
+    transition: all 1s ease-in-out;
 }
 
 #hero{
+    top: 0;
+    left: 0;
     width: 32px;
     height: 32px;
     background-color: darkmagenta;
@@ -93,6 +96,7 @@
 .character{
     position: absolute;
     z-index: 100;
+    transition: all 1s ease-in-out;
 }
 
 .foreground{

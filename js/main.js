@@ -5,9 +5,12 @@ document.getElementById("mainTitle").innerText = "Point N Click Adventure";
 //gameWindow
 const gameWindow = document.getElementById("gameWindow");
 
-//mainCharacter
+//Inventory
+const inventoryList = document.getElementById("inventoryList");
+//Main Character
 const mainCharacter = document.getElementById("hero");
 const offsetCharacter = 16;
+const tree1 = document.getElementById("squareTree");
 
 gameWindow.onclick = function (e) {
     var rect = gameWindow.getBoundingClientRect();
@@ -16,9 +19,41 @@ gameWindow.onclick = function (e) {
     
     console.log("x is " + x + " and y is " +y);
 
-    mainCharacter.style.left = x - mainCharacter.style.width/2 + "px";
+    if (e.target.id !== "heroImage")
+    {
+        mainCharacter.style.left = x - mainCharacter.style.width/2 + "px";
+        mainCharacter.style.top = y - mainCharacter.style.height/2 + "px";
+    }
 
-    mainCharacter.style.top = y - mainCharacter.style.height/2 + "px";
+    switch (e.target.id)
+    {
+        case "squareTree":
+            tree1.style.opacity = 0.5;
+            break;
+            case "key":
+                
+                break;
+        default:
+            tree1.style.opacity = 1;
+
+    }
+
+    function getItem(itemName, itemId){
+
+    }
+
+    function checkItem(itemId){
+
+    }
+    
+    function showItem(itemName, itemId){
+                console.log('You\'ve found a key!' + itemName,'!');
+                document.getElementById("key").remove();
+                const keyElement = document.createElement("li");
+                keyElement.id = itemId;
+                keyElement.innerText = itemName;
+                inventoryList.appendChild(keyElement);
+    }
 
 
 }
