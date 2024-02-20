@@ -1,6 +1,5 @@
 .body{
     display: grid;
-    /*can be changed too a grid based. i chose flex bc its more 'flex'ible.*/
     grid-template-columns: auto 800px auto;
     grid-template-rows: auto 608px auto;
     
@@ -9,11 +8,6 @@
 #title{
     grid-column-start: 2;
     grid-column-end: 1;
-    /*
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    */
 }
 
 #gameWindow{
@@ -89,7 +83,22 @@
     top: 166px;
     opacity: 1;
     transition: all 1s ease-in-out;  
+}
 
+#well{
+    width: 64px;
+    height: 64px;
+    background-color: #fe9400;
+    left: 288px;
+    top: 96px;
+}
+
+#doorWizardHut {
+    width: 32px;
+    height: 64px;
+    background-color: #FF0000;
+    left: 177px;
+    top: 287px;
 }
 
 #hero{

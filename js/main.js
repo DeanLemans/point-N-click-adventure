@@ -7,6 +7,8 @@ const gameWindow = document.getElementById("gameWindow");
 
 //Inventory
 const inventoryList = document.getElementById("inventoryBox");
+let inventory = [];
+console.log(inventory);
 //Main Character
 const mainCharacter = document.getElementById("hero");
 const offsetCharacter = 16;
@@ -33,10 +35,25 @@ gameWindow.onclick = function (e) {
             case "key":
                 getItem("Rusty key", "rustyKey")
                 break;
+            case "well":
+                getItem("coin", "coin")
+                break;
+                case "doorWizardHut":
+                    if (checkItem("Rusty key")) {
+                        console.log("I opened the door. Yeah!");
+                    } else if (checkItem("Coin")) {
+                        removeItem("Coin", "coin")
+                        console.log("Oh no I lost the coin and it didn't open the door.. Feel kinda stupid..");
+                    } else {
+                        console.log("Fuck this door is locked and I don't have a key. boohoo :(");
+                    }
+                    break;
         default:
             tree1.style.opacity = 1;
 
     }
+
+
     /**
      * checks if the value exist within the array
      * if not then it adds value to the array and use showItem function
@@ -45,17 +62,20 @@ gameWindow.onclick = function (e) {
      */
     function getItem(itemName, itemId){
         if(!checkItem(itemName)){
-            inventorypush(itemName);
+            inventory.push(itemName);
             showItem(itemName, itemId);
         }
-        showItem("Rusty Key", "rustyKey");
+        console.log(inventory);
     }
 
-    function checkItem(itemId){
-        return inventoryList.includes(itemName);
+
+    function checkItem(itemName){
+        return inventory.includes(itemName);
     }
+
+
     /**
-     * 
+     * needs a name for displaying item and a html id namea
      * @param {*} itemName 
      * @param {*} itemId 
      */
@@ -68,6 +88,13 @@ gameWindow.onclick = function (e) {
         inventoryList.appendChild(keyElement);
     }
 
+
+    function removeItem(itemName, itemId){
+        inventory = inventory.filter(function(newInventory){
+            return newInventory !== itemName;
+        })
+        document.getElementById(itemId).remove();
+    }
 
 }
 
