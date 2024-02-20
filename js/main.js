@@ -6,7 +6,7 @@ document.getElementById("mainTitle").innerText = "Point N Click Adventure";
 const gameWindow = document.getElementById("gameWindow");
 
 //Inventory
-const inventoryList = document.getElementById("inventoryList");
+const inventoryList = document.getElementById("inventoryBox");
 //Main Character
 const mainCharacter = document.getElementById("hero");
 const offsetCharacter = 16;
@@ -17,7 +17,7 @@ gameWindow.onclick = function (e) {
     var x = e.clientX - rect.left;
     var y = e.clientY - rect.top;
     
-    console.log("x is " + x + " and y is " +y);
+    //console.log("x is " + x + " and y is " +y);
 
     if (e.target.id !== "heroImage")
     {
@@ -39,7 +39,7 @@ gameWindow.onclick = function (e) {
     }
 
     function getItem(itemName, itemId){
-
+        showItem("Rusty Key", "rustyKey");
     }
 
     function checkItem(itemId){
@@ -47,12 +47,12 @@ gameWindow.onclick = function (e) {
     }
     
     function showItem(itemName, itemId){
-                console.log('You\'ve found a key!' + itemName,'!');
-                document.getElementById("key").remove();
-                const keyElement = document.createElement("li");
-                keyElement.id = itemId;
-                keyElement.innerText = itemName;
-                inventoryList.appendChild(keyElement);
+        console.log('You\'ve found a key!' + itemName,'!');
+       
+        const keyElement = document.createElement("li");            
+        keyElement.id = itemId;                
+        keyElement.innerText = itemName;
+        inventoryList.appendChild(keyElement);
     }
 
 

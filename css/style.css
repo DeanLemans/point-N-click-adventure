@@ -31,6 +31,7 @@
     background-color: #000000;
     top: 10px;
     left: 10px;
+    color: white
 }
 
 #dialogBar{
@@ -71,10 +72,24 @@
 }
 
 #squareTree{
-    width: 46px;
-    height: 46px;
-    background-color: forestgreen;
-    transition: all 1s ease-in-out;
+    width: 64px;
+    height: 64px;
+    background-color: #00ff00;
+    left: 400px;
+    top: 150px;
+    opacity: 1;
+    transition: all 1s ease-in-out;  
+}
+
+#key {
+    width: 32px;
+    height: 32px;
+    background-color: #fffb00;
+    left: 220px;
+    top: 166px;
+    opacity: 1;
+    transition: all 1s ease-in-out;  
+
 }
 
 #hero{
@@ -83,6 +98,7 @@
     width: 32px;
     height: 32px;
     background-color: darkmagenta;
+    transition: all 1s ease-in-out;  
 }
 
 #tileMap{}
