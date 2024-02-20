@@ -31,21 +31,34 @@ gameWindow.onclick = function (e) {
             tree1.style.opacity = 0.5;
             break;
             case "key":
-                
+                getItem("Rusty key", "rustyKey")
                 break;
         default:
             tree1.style.opacity = 1;
 
     }
-
+    /**
+     * checks if the value exist within the array
+     * if not then it adds value to the array and use showItem function
+     * @param {*} itemName 
+     * @param {*} itemId 
+     */
     function getItem(itemName, itemId){
+        if(!checkItem(itemName)){
+            inventorypush(itemName);
+            showItem(itemName, itemId);
+        }
         showItem("Rusty Key", "rustyKey");
     }
 
     function checkItem(itemId){
-
+        return inventoryList.includes(itemName);
     }
-    
+    /**
+     * 
+     * @param {*} itemName 
+     * @param {*} itemId 
+     */
     function showItem(itemName, itemId){
         console.log('You\'ve found a key!' + itemName,'!');
        
