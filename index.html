@@ -4,53 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>point n click adventure</title>
+    <title>Point and click adventure</title>
     <link rel="stylesheet" href="css/style.css">
-    
 </head>
+
 <body>
     <div id="title">
-        <h1 id="mainTitle">walter black</h1>
+        <h1 id="mainTitle">something</h1>
     </div>
     <div id="gameWindow">
-        <!-- inventory box -->
+        <!--Inventory box-->
         <div id="inventoryBox" class="foreground">
-
+            <ul id="inventoryList">
+            </ul>
         </div>
-        <!-- dialog bar -->
+        <!--dialog bar-->
         <div id="dialogBar" class="foreground">
             <div id="setMainDialog">
                 <div id="heroAvatar" class="foreground">
-
+                    <img src="img/portairt.png" alt="hero avatar">
                 </div>
-                <div id="heroSpeach" class="foreground">
-
+                <div id="heroSpeech" class="foreground speechBubble">
+                    ...
                 </div>
-                <div id="counterSpeach" class="foreground">
-
+                <div id="counterSpeech" class="foreground speechBubble">
+                    ...
                 </div>
                 <div id="counterAvatar" class="foreground">
-
+                    <img src="img/portairStatue.png" alt="Counter avatar">
                 </div>
+                <div id="brownBar" class="background"></div>
             </div>
         </div>
-        <!-- foreground elements -->
-        <div id="squareTree" class="foreground"></div>
+        <!--Foreground elements-->
         <div id="key" class="foreground"></div>
-        <div id="well" class="well"></div>
+        <div id="well" class="foreground"></div>
         <div id="doorWizardHut" class="foreground"></div>
+        <div id="statue" class="foreground"></div>
 
-        <!-- main character -->
+        <!--Main Character-->
         <div id="hero" class="character">
-            <img src="img/animated-character-1-idle.gif" alt="hero" id="heroImage">
+            <img src="img/animated-character-1-idle.gif" alt="hero charcater" id="heroImage">
         </div>
 
-        <!-- background elements -->
+        <!--Background elements-->
         <div id="tileMap" class="background">
             <img src="img/tilemap1.jpg" alt="tilemap" draggable="false">
         </div>
 
     </div>
+
+    <audio id="heroAudio">
+        <source src="audio/Gibberish - Sound Effect_01.mp3">
+    </audio>
+
+    <audio id="counterAudio">
+        <source  src="audio/high pitch voice.mp3">
+    </audio>
+    
+
 </body>
+
 </html>
 <script src="js/main.js"></script>

@@ -1,16 +1,15 @@
-.body{
+body {
     display: grid;
     grid-template-columns: auto 800px auto;
     grid-template-rows: auto 608px auto;
-    
 }
 
-#title{
+#title {
     grid-column-start: 2;
-    grid-column-end: 1;
+    grid-row-start: 1;
 }
 
-#gameWindow{
+#gameWindow {
     width: 800px;
     height: 608px;
     background-color: #0022fe;
@@ -19,7 +18,7 @@
     position: relative;
 }
 
-#inventoryBox{
+#inventoryBox {
     width: 180px;
     height: 80px;
     background-color: #000000;
@@ -28,67 +27,78 @@
     color: white
 }
 
-#dialogBar{
+#dialogBar {
     bottom: 0px;
 }
 
-#setMainDialog{
+#setMainDialog {
     position: relative;
     width: 800px;
     height: 64px;
-    background-color: #FFFFFF;
+   
 }
 
-#heroAvatar{
-    width: 100px;
-    height: 100px;
-    background-color: #fe9400;
+#heroAvatar {
+    width: 72px;
+    height: 68px;
     bottom: 0px;
     left: 0px;
 }
 
-#heroSpeach{
+#heroSpeech {
     width: 300px;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
+    top: 0px;
+    left: 72px;
+    opacity: 0;
 }
 
-#counterSpeach{
+#counterSpeech {
     width: 300px;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
+    top: 0px;
+    right: 72px;
+    opacity: 0;
 }
 
-#counterAvatar{
-    width: 100px;
-    height: 100px;
-    background-color: crimson;
+#counterAvatar {
+    width: 72px;
+    height: 68px;
     bottom: 0px;
     right: 0px;
+    opacity: 0;
 }
 
-#squareTree{
+#brownBar{
+    bottom: 0px;
+    height: 32px;
+    width: 800px;
+    background-color: #442c1c;
+}
+
+#squareTree {
     width: 64px;
     height: 64px;
     background-color: #00ff00;
     left: 400px;
     top: 150px;
     opacity: 1;
-    transition: all 1s ease-in-out;  
+    transition: all 1s ease-in-out;
+
 }
 
 #key {
     width: 32px;
     height: 32px;
-    background-color: #fffb00;
-    left: 220px;
-    top: 166px;
+    left: 86px;
+    top: 450px;
     opacity: 1;
-    transition: all 1s ease-in-out;  
+    transition: all 1s ease-in-out;
 }
 
-#well{
+#well {
     width: 64px;
     height: 64px;
-    background-color: #fe9400;
     left: 288px;
     top: 96px;
 }
@@ -96,35 +106,47 @@
 #doorWizardHut {
     width: 32px;
     height: 64px;
-    background-color: #FF0000;
     left: 177px;
     top: 287px;
 }
 
-#hero{
-    top: 0;
-    left: 0;
+#statue {
+    width: 32px;
+    height: 64px;
+    left: 704px;
+    top: 287px;
+}
+
+#hero {
+    top: 390px;
+    left: 267px;
     width: 32px;
     height: 32px;
-    background-color: darkmagenta;
-    transition: all 1s ease-in-out;  
+    transition: all 1s ease-in-out;
+
 }
 
-#tileMap{}
+#tileMap {}
 
-.background{
+.background {
     position: absolute;
     z-index: 0;
-    
 }
 
-.character{
+.character {
     position: absolute;
     z-index: 100;
-    transition: all 1s ease-in-out;
 }
 
-.foreground{
+.foreground {
     position: absolute;
     z-index: 1000;
+}
+
+.speechBubble{
+    border-radius: 60px;
+    padding: 5px 5px 5px 20px;
+    user-select: none;
+    cursor: default;
+    transition: all 1s ease-in-out;
 }
