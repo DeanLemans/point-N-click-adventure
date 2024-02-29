@@ -1,2 +1,2 @@
 sup
-this is my verry verrrry veryyyyy cool README
+i found this pretty boring. but i still did it.
