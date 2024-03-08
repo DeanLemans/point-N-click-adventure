@@ -90,36 +90,40 @@ body {
 #key {
     width: 32px;
     height: 32px;
-    left: 86px;
-    top: 450px;
+    left: 400px;
+    top: 448px;
     opacity: 1;
+    background-color: #0022fe;
     transition: all 1s ease-in-out;
 }
 
 #well {
-    width: 64px;
-    height: 64px;
-    left: 288px;
-    top: 96px;
+    width: 50px;
+    height: 50px;
+    left: 647px;
+    top: 103px;
+    background-color: #0022fe;
 }
 
 #doorWizardHut {
-    width: 32px;
-    height: 64px;
-    left: 177px;
-    top: 287px;
+    width: 64px;
+    height: 32px;
+    left: 128px;
+    top: 128px;
+    background-color: #0022fe;
 }
 
 #statue {
-    width: 32px;
+    width: 64px;
     height: 64px;
-    left: 704px;
-    top: 287px;
+    left: 400px;
+    top: 225px;
+    background-color: #0022fe;
 }
 
 #hero {
-    top: 390px;
-    left: 267px;
+    top: 228px;
+    left: 380px;
     width: 32px;
     height: 32px;
     transition: all 1s ease-in-out;

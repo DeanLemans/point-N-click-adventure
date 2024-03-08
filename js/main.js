@@ -166,7 +166,7 @@ function runGame() {
      */
     function hideMessage(targetBubble, targetSound) {
         targetSound.pause();
-        targetBubble.innerText = "...";
+        targetBubble.innerText = "";
         targetBubble.style.opacity = 0;
     }
 
