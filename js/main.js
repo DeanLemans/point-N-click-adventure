@@ -60,7 +60,7 @@ function runGame() {
             }
             switch (e.target.id) {
                 case "key":
-                    console.log("pick up key")
+                    console.log("picked up: key too the ritual")
                     document.getElementById("key").remove();
                     changeInventory('key', "add");
                     break;
@@ -69,28 +69,33 @@ function runGame() {
                         changeInventory("coin", "add");
                         gameState.coinPickedUp = true;
                     } else {
-                        console.log("There are no more coins in this well!");
+                        console.log("no more fragments of the Damaged One in this water");
                     }
                     break;
                 case "doorWizardHut":
                     if (checkItem("key")) {
-                        showMessage(heroSpeech, "I opened the door. Yeah!", heroAudio);
+                        showMessage(heroSpeech, "you healed the damaged god", heroAudio);
+                        setTimeout(function () { counterAvatar.style.opacity = 1; }, 1 * sec);
+                        setTimeout(showMessage, 5 * sec, counsterSpeech, "i thank you for healing me, son of men.", counterAudio);
+                        setTimeout(showMessage, 10 * sec, heroSpeech, "you trancended the mortal plane of existencte, you have become the demigod of corruption", heroAudio);
+                        setTimeout(function () { counterAvatar.style.opacity = 0; }, 16 * sec);
                         //console.log("I opened the door. Yeah!");
                     } else if (checkItem("coin")) {
                         changeInventory("coin", "remove");
-                        showMessage(heroSpeech, "Oh no I lost the coin and it didn't open the door.. Feel kinda stupid..", heroAudio);
+                        showMessage(heroSpeech, "the Damaged one did not ask you too gather his fragments.", heroAudio);
+                        setTimeout(function () { counterAvatar.style.opacity = 1; }, 1 * sec);
+                        setTimeout(showMessage, 5 * sec, heroSpeech, "you lost the fragment", counterAudio);
                         //console.log("Oh no I lost the coin and it didn't open the door.. Feel kinda stupid..");
                     } else {
-                        showMessage(heroSpeech, "Fuck this door is locked and I don't have a key. boohoo :(", heroAudio);
+                        showMessage(heroSpeech, "i have not yet performed the ritual", heroAudio);
                         //console.log("Fuck this door is locked and I don't have a key. boohoo :(");
                     }
                     break;
                 case "statue":
-                    showMessage(heroSpeech, "Hey a statue.. Looks okay.", heroAudio);
-                    setTimeout(function () { counterAvatar.style.opacity = 1; }, 4 * sec);
-                    setTimeout(showMessage, 4.1 * sec, counsterSpeech, "I can talk you know..", counterAudio);
-                    setTimeout(showMessage, 8.1 * sec, heroSpeech, "Wait what? That's not normal", heroAudio);
-                    setTimeout(showMessage, 12.1 * sec, counsterSpeech, "Just shut up.. You want a key.. Check the graves.", counterAudio);
+                    showMessage(heroSpeech, "You found the body of a damaged god. you cannot grasp its true form", heroAudio);
+                    setTimeout(function () { counterAvatar.style.opacity = 1; }, 1 * sec);
+                    setTimeout(showMessage, 4 * sec, counsterSpeech, "find the key too the ritual, it will heal me. as a reward i will make you a demigod", counterAudio);
+                    setTimeout(showMessage, 10 * sec, heroSpeech, "sure", heroAudio);
                     setTimeout(function () { counterAvatar.style.opacity = 0; }, 16 * sec);
                     //console.log("hey you.. wanna know where the key is? It's by the graves.");
                     break;
